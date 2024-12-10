@@ -1,0 +1,129 @@
+*{
+    font-family: "Rog";
+}
+@font-face {
+    font-family: "Rog";
+    src: url(assets/font/ROGLyonsTypeRegular3.ttf);
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #e4e4e4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  #game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    margin-top: 20px;
+    align-self: center;
+  }
+  
+  #board {
+    justify-self: center;
+    display: none;
+    grid-template-columns: repeat(7, 60px);
+    grid-gap: 5px;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #3a3a3a;
+    width: 35%;
+    position: relative;
+  }
+
+  .cell {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .cell.One {
+    background-image: linear-gradient(rgb(255, 85, 85), rgb(206, 0, 0));
+  }
+  
+  .cell.Two {
+    background-image: linear-gradient(rgb(85, 130, 255), rgb(0, 31, 206));
+  }
+
+  .cell.Ray {
+    background-image: linear-gradient(rgb(187, 85, 255), rgb(68, 0, 255));
+  }
+  .cell.Jona {
+    background-image: linear-gradient(rgb(204, 255, 85), rgb(208, 255, 0));
+  }
+  .cell.Adlie {
+    background-image: linear-gradient(rgb(80, 80, 80), rgb(0, 0, 0));
+  }
+  
+  #status {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    align-items: center;
+  }
+  
+  .cell.highlight {
+    border: 3px solid rgb(0, 255, 85);
+    animation: pulse 0.8s infinite alternate;
+  }
+  
+  
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  #menu {
+  margin-top: 20px;
+}
+
+#menu button {
+    font-size: 40px;
+    background-color: #3a3a3a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  #menu button:hover {
+    background-color: #555;
+  }
+  
+
+#gamecont {
+  margin-top: 20px;
+}
+#restart-btn {
+    font-size: 15px;
+    background-color: #3a3a3a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 20px;
+}
+
+#restart-btn:hover {
+    background-color: #555;
+}
